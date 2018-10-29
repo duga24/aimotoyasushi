@@ -8,7 +8,6 @@ var outArray = new Array();
 //-インプットファイルREAD------------------------------------------//
 //---------------------------------------------------------------//
 function loadText(){
-	alert("hit1");
   xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = checkStatus;
   xmlHttp.open("GET", "./data/txt10000.txt", true);
@@ -18,7 +17,6 @@ function loadText(){
 //-1行づつ配列に格納 & ステータスチェック（読み終わり検知） ----------//
 //---------------------------------------------------------------//
 function checkStatus(){
-	alert("hit2");
   if (xmlHttp.readyState == 4 && xmlHttp.status == 200){           //github up 用
 //  if (xmlHttp.readyState == 4 && xmlHttp.status == 0){               //ローカル環境用
     lines = xmlHttp.responseText.split( '\n' );
